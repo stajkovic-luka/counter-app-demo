@@ -28,4 +28,4 @@ def visits():
 def health():
     if storage.ping():
         return {"status": "ok"}
-    return JSONResponse(status_code=503, content={"status": "error"})
+    return JSONResponse(status_code=503, content={"status": "redis unavailable"})
