@@ -21,11 +21,12 @@ WORKDIR /app
 COPY --from=build /opt/venv /opt/venv
 
 ENV PATH="/opt/venv/bin/:$PATH"
-ENV APP_PORT=8000
+ENV APP_PORT=8080
 
 COPY server.py storage.py ./
 
 RUN adduser -D appuser
 USER appuser
+EXPOSE 8080
 
 CMD ["sh","-c","exec uvicorn server:app --host 0.0.0.0 --port=${APP_PORT}"]
