@@ -1,5 +1,5 @@
 services:
-    fastapi:
+    app:
         build:
             context: .
             dockerfile: Dockerfile
@@ -16,7 +16,7 @@ services:
             - counter-app-network
     redis:
         image: redis:7.0.1-alpine
-        restart: always
+        restart: unless-stopped
         volumes:
             - counter-redis_data:/data
         networks:
