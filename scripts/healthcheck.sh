@@ -28,7 +28,9 @@ else
                 exit 0
             else
                 echo "[$TIMESTAMP] [ERROR] [$STATUS] Pokusaj ${i}/5"
-                sleep 3
+                if [[ $i -lt 5 ]]; then
+                    sleep 3
+                fi
 
             fi
 
