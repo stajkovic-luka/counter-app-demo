@@ -1,9 +1,10 @@
 import socket
 
 import redis
-import storage
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+
+import storage
 
 app = FastAPI()
 
