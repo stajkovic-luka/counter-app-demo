@@ -42,3 +42,7 @@ jobs:
                 registry: ghcr.io
                 username: ${{ github.actor }}
                 password: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Push image to GHCR
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+              run: docker push ghcr.io/stajkovic-luka/counter-app:${{ github.sha }}
