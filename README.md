@@ -152,7 +152,6 @@ homelab okruženja opisana je na repozitorijumu
 
 ## Sadržaj repozitorijuma
 
-```
 counter-app-demo/
 ├── server.py               # FastAPI aplikacija — tri endpointa (/, /visits, /health)
 ├── storage.py              # pristup Redisu
@@ -161,15 +160,18 @@ counter-app-demo/
 ├── Dockerfile              # image aplikacije (single-stage, non-root)
 ├── Dockerfile.multistage   # multi-stage verzija Dockerfile
 ├── compose.yaml            # Docker compose fajl
-├── .dockerignore           
+├── .dockerignore
 ├── .env.example            # primer .env fajla
-├── .gitignore              
+├── .gitignore
 ├── scripts/
 │   └── healthcheck.sh      # skripta za proveru dostupnosti app
+├── k8s/
+│   ├── configmap.yaml      # konfiguracija aplikacije (env varijable)
+│   ├── redis.yaml          # Redis: Deployment, Service, PVC
+│   └── app.yaml            # aplikacija: Deployment, NodePort servis
 └── .github/
     └── workflows/
         └── ci.yml          # CI pipeline
-```
 
 ## Preduslovi za pokretanje aplikacije
 
