@@ -152,6 +152,7 @@ homelab okruženja opisana je na repozitorijumu
 
 ## Sadržaj repozitorijuma
 
+```
 counter-app-demo/
 ├── server.py               # FastAPI aplikacija — tri endpointa (/, /visits, /health)
 ├── storage.py              # pristup Redisu
@@ -172,6 +173,7 @@ counter-app-demo/
 └── .github/
     └── workflows/
         └── ci.yml          # CI pipeline
+```
 
 ## Preduslovi za pokretanje aplikacije
 
